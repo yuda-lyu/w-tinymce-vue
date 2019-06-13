@@ -9,13 +9,11 @@ A wrapper for @tinymce/tinymce-vue.
 [![jsdelivr download](https://img.shields.io/jsdelivr/npm/hm/w-tinymce-vue.svg)](https://www.jsdelivr.com/package/npm/w-tinymce-vue)
 
 ## Documentation
-To view documentation or get support, visit [docs](https://yuda-lyu.github.io/w-tinymce-vue/global.html).
+To view documentation or get support, visit [docs](https://yuda-lyu.github.io/w-tinymce-vue/module-WTinymceVue.html).
 
 ## Example
 To view some examples for more understanding, visit examples:
-> **small data:** [ex-small.html](https://yuda-lyu.github.io/w-tinymce-vue/examples/ex-small.html) [[source code](https://github.com/yuda-lyu/w-tinymce-vue/blob/master/docs/examples/ex-small.html)]
-
-> **large data:** [ex-large.html](https://yuda-lyu.github.io/w-tinymce-vue/examples/ex-large.html) [[source code](https://github.com/yuda-lyu/w-tinymce-vue/blob/master/docs/examples/ex-large.html)]
+> **default:** [ex-default.html](https://yuda-lyu.github.io/w-tinymce-vue/examples/ex-default.html) [[source code](https://github.com/yuda-lyu/w-tinymce-vue/blob/master/docs/examples/ex-default.html)]
 
 ## Installation
 ### Using npm(ES6 module):
@@ -23,27 +21,9 @@ To view some examples for more understanding, visit examples:
 ```alias
 npm i w-tinymce-vue
 ```
-By import:
-```alias
-import jv from 'w-tinymce-vue'
-
-let data={a1:123,b1:'xyz',c1:[1.2,3.4,'5.6',false],d1:{cid:'WK2WHS',name:'peter',unique:false}}
-let ele=document.querySelector('#id')
-
-jv(data, element, {expanded:true})
-```
 
 ### In a browser(UMD module):
 Add script for w-tinymce-vue.
 ```alias
 <script src="https://cdn.jsdelivr.net/npm/w-tinymce-vue@1.0.0/dist/w-tinymce-vue.umd.js"></script>
-```
-Directly use:
-```alias
-let jv=window['w-tinymce-vue']
-
-let data={a1:123,b1:'xyz',c1:[1.2,3.4,'5.6',false],d1:{cid:'WK2WHS',name:'peter',unique:false}}
-let ele=document.querySelector('#id')
-
-jv(data, element, {expanded:true})
 ```
