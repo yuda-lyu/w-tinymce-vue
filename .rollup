@@ -4,14 +4,12 @@ import resolve from 'rollup-plugin-node-resolve'
 import postcss from 'rollup-plugin-postcss'
 import babel from 'rollup-plugin-babel'
 import buble from 'rollup-plugin-buble'
-import replace from 'rollup-plugin-replace'
 import minify from 'rollup-plugin-babel-minify'
 import fs from 'fs'
 import _ from 'lodash'
 
 
 let pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'))
-//let env = process.env.NODE_ENV
 
 
 let optBabel = {
@@ -32,9 +30,6 @@ let optBabel = {
 
 let optPlugins = [
     vue(),
-    //replace({
-    //    'process.env.NODE_ENV': JSON.stringify(env)
-    //  }),
     commonjs(),
     resolve({
         preferBuiltins: false,
