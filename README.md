@@ -17,13 +17,23 @@ To view some examples for more understanding, visit examples:
 
 ## Installation
 ### Using npm(ES6 module):
-> **Note:** w-tinymce-vue does't depend on any package.
+> **Note:** w-tinymce-vue depends on `tinymce` and `vue`.
 ```alias
 npm i w-tinymce-vue
 ```
 
 ### In a browser(UMD module):
-Add script for w-tinymce-vue.
+> **Note:** umd file includes with `@tinymce/tinymce-vue`, by using tree-shaking for dead-code elimination
+
+[Necessary] Add script for tinymce.
+```alias
+<script src="https://cdn.jsdelivr.net/npm/tinymce/tinymce.min.js"></script>
+```
+[Necessary] Add script for vue.
+```alias
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+```
+[Necessary] Add script for w-tinymce-vue.
 ```alias
 <script src="https://cdn.jsdelivr.net/npm/w-tinymce-vue@1.0.1/dist/w-tinymce-vue.umd.js"></script>
 ```
