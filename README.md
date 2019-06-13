@@ -25,5 +25,5 @@ npm i w-tinymce-vue
 ### In a browser(UMD module):
 Add script for w-tinymce-vue.
 ```alias
-<script src="https://cdn.jsdelivr.net/npm/w-tinymce-vue@1.0.0/dist/w-tinymce-vue.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/w-tinymce-vue@1.0.1/dist/w-tinymce-vue.umd.js"></script>
 ```
