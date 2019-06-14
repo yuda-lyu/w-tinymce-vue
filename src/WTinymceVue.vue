@@ -65,7 +65,6 @@ export default {
     },
     data: function() {
         return {
-
         }
     },
     mounted: function() {
@@ -78,7 +77,15 @@ export default {
 </script>
 
 <style scoped>
-::v-deep div, button, span, p, a, select, option {
+::v-deep div {
+    font: inherit;
+    font-family: inherit;
+}
+::v-deep button {
+    font: inherit;
+    font-family: inherit;
+}
+::v-deep span {
     font: inherit;
     font-family: inherit;
 }
