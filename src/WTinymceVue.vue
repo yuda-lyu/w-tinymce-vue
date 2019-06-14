@@ -1,5 +1,5 @@
 <template>
-    <div style="display:inline-block;">
+    <div class="WTinymceVue" style="display:inline-block;">
 
         <tinymce-vue
             :init="settings"
@@ -32,7 +32,7 @@ let def_settings = {
             //style
             let s = ed.getBody().style
             s.fontSize = '11pt'
-            s.fontFamily = 'Microsoft JhengHei'
+            s.fontFamily = "'Microsoft JhengHei','Avenir','Helvetica'"
 
         })
     },
@@ -68,6 +68,19 @@ export default {
         }
     },
     mounted: function() {
+        // //強制修改選單字型
+        // function modifyFontFamily(q) {
+        //     let elems = document.querySelectorAll(q)
+        //     console.log(elems)
+        //     let index = 0; let length = elems.length
+        //     for (; index < length; index++) {
+        //         elems[index].style.fontFamily = 'Microsoft JhengHei'
+        //     }
+        // }
+        // //因tinymce選單是啟動後插入, 無法被css樣式穿透修改, 故改用js延遲修改
+        // setTimeout(function() {
+        //     modifyFontFamily('div,button,span,p,a')
+        // }, 500)
     },
     computed: {
     },
@@ -78,12 +91,17 @@ export default {
 
 <style scoped>
 ::v-deep div {
-    font-family: 'Microsoft JhengHei';
+    font-family: 'Microsoft JhengHei','Avenir','Helvetica';
 }
 ::v-deep button {
-    font-family: 'Microsoft JhengHei';
+    font-family: 'Microsoft JhengHei','Avenir','Helvetica';
 }
 ::v-deep span {
-    font-family: 'Microsoft JhengHei';
+    font-family: 'Microsoft JhengHei','Avenir','Helvetica';
+}
+</style>
+<style>
+.tox-collection__item-label {
+    font-family: 'Microsoft JhengHei','Avenir','Helvetica' !important;
 }
 </style>
