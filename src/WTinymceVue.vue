@@ -102,7 +102,7 @@ export default {
 }
 </style>
 <style>
-/* 組件彈出選單用全域樣式覆蓋 */
+/* 組件彈出選單用全域樣式覆蓋, 會影響到其他直接使用tinymce的地方 */
 .tox-collection__item-label {
     font-family: 'Microsoft JhengHei','Avenir','Helvetica' !important;
 }
