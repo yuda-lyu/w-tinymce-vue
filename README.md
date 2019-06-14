@@ -29,7 +29,7 @@ By import:
 
 import WTinymceVue from 'w-tinymce-vue'
 
-Vue.component(WTinymceVue)
+Vue.component('w-tinymce-vue', WTinymceVue)
 ```
 
 ### In a browser(UMD module):
@@ -53,12 +53,12 @@ Directly use:
     v-model="..."
 ></w-tinymce-vue>
 
-Vue.component('w-tinymce-vue',window['w-tinymce-vue'])
+Vue.component('w-tinymce-vue', window['w-tinymce-vue'])
 
 new Vue({
     el: '#app',
     data: {
-        content:'abc中文123'
+        content: 'abc中文123'
     }
 })
 ```

@@ -90,6 +90,7 @@ export default {
 </script>
 
 <style scoped>
+/* 組件內選單初始文字用樣式穿透覆蓋 */
 ::v-deep div {
     font-family: 'Microsoft JhengHei','Avenir','Helvetica';
 }
@@ -101,6 +102,7 @@ export default {
 }
 </style>
 <style>
+/* 組件彈出選單用全域樣式覆蓋 */
 .tox-collection__item-label {
     font-family: 'Microsoft JhengHei','Avenir','Helvetica' !important;
 }
