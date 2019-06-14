@@ -23,10 +23,13 @@ npm i w-tinymce-vue
 ```
 By import:
 ```alias
+<w-tinymce-vue 
+    v-model="..."
+></w-tinymce-vue>
+
 import WTinymceVue from 'w-tinymce-vue'
 
 Vue.component(WTinymceVue)
-
 ```
 
 ### In a browser(UMD module):
@@ -42,5 +45,20 @@ Vue.component(WTinymceVue)
 ```
 [Necessary] Add script for w-tinymce-vue.
 ```alias
-<script src="https://cdn.jsdelivr.net/npm/w-tinymce-vue@1.0.2/dist/w-tinymce-vue.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/w-tinymce-vue@1.0.3/dist/w-tinymce-vue.umd.js"></script>
+```
+Directly use:
+```alias
+<w-tinymce-vue 
+    v-model="..."
+></w-tinymce-vue>
+
+Vue.component('w-tinymce-vue',window['w-tinymce-vue'])
+
+new Vue({
+    el: '#app',
+    data: {
+        content:'abc中文123'
+    }
+})
 ```
