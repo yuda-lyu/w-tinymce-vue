@@ -45,7 +45,7 @@ Vue.component(WTinymceVue)
 ```
 [Necessary] Add script for w-tinymce-vue.
 ```alias
-<script src="https://cdn.jsdelivr.net/npm/w-tinymce-vue@1.0.3/dist/w-tinymce-vue.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/w-tinymce-vue@1.0.4/dist/w-tinymce-vue.umd.js"></script>
 ```
 Directly use:
 ```alias

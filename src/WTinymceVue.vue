@@ -54,7 +54,9 @@ export default {
         },
         settings: {
             type: Object,
-            default: def_settings
+            default: function() {
+                return def_settings
+            }
         },
         editable: {
             type: Boolean,
