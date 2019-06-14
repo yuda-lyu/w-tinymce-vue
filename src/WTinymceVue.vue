@@ -78,15 +78,12 @@ export default {
 
 <style scoped>
 ::v-deep div {
-    font: inherit;
-    font-family: inherit;
+    font-family: 'Microsoft JhengHei';
 }
 ::v-deep button {
-    font: inherit;
-    font-family: inherit;
+    font-family: 'Microsoft JhengHei';
 }
 ::v-deep span {
-    font: inherit;
-    font-family: inherit;
+    font-family: 'Microsoft JhengHei';
 }
 </style>
