@@ -21,6 +21,13 @@ To view some examples for more understanding, visit examples:
 ```alias
 npm i w-tinymce-vue
 ```
+By import:
+```alias
+import WTinymceVue from 'w-tinymce-vue'
+
+Vue.component(WTinymceVue)
+
+```
 
 ### In a browser(UMD module):
 > **Note:** umd file includes with `@tinymce/tinymce-vue`, by using tree-shaking for dead-code elimination
