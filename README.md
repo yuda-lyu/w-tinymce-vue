@@ -17,7 +17,7 @@ To view some examples for more understanding, visit examples:
 
 ## Installation
 ### Using npm(ES6 module):
-> **Note:** w-tinymce-vue depends on `tinymce` and `vue`.
+> **Note:** w-tinymce-vue depends on `tinymce`, `@tinymce/tinymce-vue` and `vue`.
 ```alias
 npm i w-tinymce-vue
 ```
@@ -45,7 +45,7 @@ Vue.component('w-tinymce-vue', WTinymceVue)
 ```
 [Necessary] Add script for w-tinymce-vue.
 ```alias
-<script src="https://cdn.jsdelivr.net/npm/w-tinymce-vue@1.0.8/dist/w-tinymce-vue.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/w-tinymce-vue@1.0.9/dist/w-tinymce-vue.umd.js"></script>
 ```
 Directly use:
 ```alias

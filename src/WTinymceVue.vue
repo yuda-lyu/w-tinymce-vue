@@ -1,5 +1,5 @@
 <template>
-    <div class="WTinymceVue" style="display:inline-block;">
+    <div style="display:inline-block;">
 
         <tinymce-vue
             :init="settings"
