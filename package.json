@@ -1,6 +1,6 @@
 {
   "name": "w-tinymce-vue",
-  "version": "1.0.10",
+  "version": "1.0.13",
   "description": "A wrapper for @tinymce/tinymce-vue.",
   "main": "dist/w-tinymce-vue.umd.js",
   "dependencies": {
