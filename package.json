@@ -1,6 +1,6 @@
 {
   "name": "w-tinymce-vue",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "A wrapper for @tinymce/tinymce-vue.",
   "main": "dist/w-tinymce-vue.umd.js",
   "dependencies": {
@@ -18,7 +18,7 @@
     "@vue/cli-plugin-babel": "^3.11.0",
     "@vue/cli-plugin-eslint": "^3.11.0",
     "@vue/cli-service": "^3.11.0",
-    "babel-eslint": "^10.0.2",
+    "babel-eslint": "^10.0.3",
     "core-js": "^3.2.1",
     "css-loader": "^3.2.0",
     "docdash": "^1.1.1",
