@@ -1,6 +1,6 @@
 {
   "name": "w-tinymce-vue",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "A wrapper for @tinymce/tinymce-vue.",
   "main": "dist/w-tinymce-vue.umd.js",
   "dependencies": {
@@ -23,7 +23,7 @@
     "css-loader": "^3.2.0",
     "docdash": "^1.1.1",
     "eslint": "^6.2.2",
-    "eslint-config-standard": "^14.0.1",
+    "eslint-config-standard": "^14.1.0",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^3.0.0",
     "eslint-plugin-import": "^2.18.2",
