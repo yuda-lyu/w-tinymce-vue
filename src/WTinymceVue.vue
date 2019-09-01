@@ -32,7 +32,7 @@ let def_settings = {
             //style
             let s = ed.getBody().style
             s.fontSize = '11pt'
-            s.fontFamily = "'Microsoft JhengHei','Avenir','Helvetica'"
+            s.fontFamily = `'Microsoft JhengHei','Avenir','Helvetica'`
 
         })
     },
