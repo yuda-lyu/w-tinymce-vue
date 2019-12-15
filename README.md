@@ -2,6 +2,7 @@
 A wrapper for @tinymce/tinymce-vue.
 
 ![language](https://img.shields.io/badge/language-JavaScript-orange.svg) 
+[![language](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://github.com/vuejs/vue) 
 [![npm version](http://img.shields.io/npm/v/w-tinymce-vue.svg?style=flat)](https://npmjs.org/package/w-tinymce-vue) 
 [![Build Status](https://travis-ci.org/yuda-lyu/w-tinymce-vue.svg?branch=master)](https://travis-ci.org/yuda-lyu/w-tinymce-vue) [![license](https://img.shields.io/npm/l/w-tinymce-vue.svg?style=flat)](https://npmjs.org/package/w-tinymce-vue) 
 [![gzip file size](http://img.badgesize.io/yuda-lyu/w-tinymce-vue/master/dist/w-tinymce-vue.umd.js.svg?compression=gzip)](https://github.com/yuda-lyu/w-tinymce-vue)
@@ -45,7 +46,7 @@ Vue.component('w-tinymce-vue', WTinymceVue)
 ```
 [Necessary] Add script for w-tinymce-vue.
 ```alias
-<script src="https://cdn.jsdelivr.net/npm/w-tinymce-vue@1.0.20/dist/w-tinymce-vue.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/w-tinymce-vue@1.0.21/dist/w-tinymce-vue.umd.js"></script>
 ```
 Directly use:
 ```alias
