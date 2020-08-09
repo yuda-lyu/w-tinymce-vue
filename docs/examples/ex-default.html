@@ -14,21 +14,36 @@
     <script src="https://cdn.jsdelivr.net/npm/w-tinymce-vue@latest/dist/w-tinymce-vue.umd.js"></script>
 
 </head>
-<body style="font-family:'Microsoft JhengHei','Avenir','Helvetica'; padding:20px;">
+<body style="font-family:'Microsoft JhengHei','Avenir','Helvetica';  margin:0px; padding:0px;">
 
     <div id="app">
 
-        <w-tinymce-vue
-            style="vertical-align:top;"
-            :height="height"
-            v-model="content"
-        ></w-tinymce-vue>
+        <div style="margin:20px;">
+            <div>1. bind height</div>
+            <w-tinymce-vue
+                style="vertical-align:top;"
+                :height="height"
+                v-model="content"
+            ></w-tinymce-vue>
+        </div>
 
-        <w-tinymce-vue
-            style="vertical-align:top;"
-            :height="200"
-            v-model="content"
-        ></w-tinymce-vue>
+        <div style="margin:20px;">
+            <div>2. sync content</div>
+            <w-tinymce-vue
+                style="vertical-align:top;"
+                :height="200"
+                v-model="content"
+            ></w-tinymce-vue>
+        </div>
+
+        <div style="margin:20px;">
+            <div>3. settings</div>
+            <w-tinymce-vue
+                style="vertical-align:top;"
+                :settings="settings"
+                v-model="content"
+            ></w-tinymce-vue>
+        </div>
 
     </div>
 
@@ -43,6 +58,21 @@
             data: {
                 content: 'abc中文123',
                 height: 250,
+                settings: {
+                    menubar: '',
+                    plugins: '',
+                    toolbar: 'fontsizeselect | forecolor backcolor | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
+                    // language: 'zh_TW',
+                    // menubar: 'edit insert format table',
+                    // plugins: 'paste imagetools link table lists advlist hr charmap', //autoresize
+                    // toolbar: 'undo redo | fontsizeselect | forecolor backcolor | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
+                    // fontsize_formats: '8pt 10pt 11pt 12pt 14pt 18pt 24pt 36pt',
+                    // invalid_elements: 'wbr', //禁止使用適合換行處元素wbr
+                    // paste_data_images: true,
+                    // branding: false, //移除logo
+                    // elementpath: false, //移除選擇元素路徑
+                    // resize: false, //禁止改變視窗大小
+                },
             },
             // mounted: function() {
             //     let vo=this

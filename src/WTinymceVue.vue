@@ -3,7 +3,7 @@
 
         <tinymce-vue
             ref="edr"
-            :init="settings"
+            :init="useSettings"
             :value="value"
             :disabled="!editable"
             @input="function(v){$emit('input',v)}"
@@ -44,9 +44,10 @@ let def_settings = {
 }
 
 /**
- * @vue-prop {String} value 輸入富文本字串
- * @vue-prop {String} settings 輸入tinymce設定物件，預設值詳見原始碼
- * @vue-prop {String} [editable=true] 輸入是否允許編輯，預設true
+ * @vue-prop {String} [value=''] 輸入富文本字串，預設為''
+ * @vue-prop {Object} [settings={}] 輸入quill設定物件，預設值詳見原始碼
+ * @vue-prop {Number} [height=250] 輸入高度數字，單位為px，預設為250
+ * @vue-prop {Boolean} [editable=true] 輸入是否允許編輯，預設true
  */
 export default {
     components: {
@@ -55,12 +56,11 @@ export default {
     props: {
         value: {
             type: String,
+            default: '',
         },
         settings: {
             type: Object,
-            default: function() {
-                return def_settings
-            }
+            default: () => {},
         },
         height: {
             type: Number,
@@ -96,6 +96,17 @@ export default {
 
     },
     computed: {
+
+        useSettings: function() {
+            //console.log('computed useSettings')
+
+            let vo = this
+
+            return {
+                ...def_settings,
+                ...vo.settings,
+            }
+        },
 
         changeHeight: function() {
             //console.log('computed changeHeight')
@@ -153,6 +164,14 @@ export default {
                 //update height
                 if (editor && ele) {
                     ele.style.height = vo.height + 'px'
+                }
+
+                //移除logo後的空白區域
+                if (vo.$el) {
+                    let sb = vo.$el.querySelector('.tox-statusbar')
+                    if (sb) {
+                        sb.remove()
+                    }
                 }
 
             })
