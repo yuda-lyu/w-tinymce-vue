@@ -1,31 +1,35 @@
 <template>
-    <div style="display:inline-block;">
+    <div style="display:inline-block;" :changeHeight="changeHeight">
 
         <tinymce-vue
+            ref="edr"
             :init="settings"
             :value="value"
             :disabled="!editable"
             @input="function(v){$emit('input',v)}"
+            @onInit="onInit"
         ></tinymce-vue>
 
     </div>
 </template>
 
 <script>
-import './zh_TW.js'
+import get from 'lodash/get'
 import Editor from '@tinymce/tinymce-vue'
+import './zh_TW.js'
+
 
 let def_settings = {
     language: 'zh_TW',
     menubar: 'edit insert format table',
-    plugins: 'paste imagetools link table lists advlist hr charmap',
+    plugins: 'paste imagetools link table lists advlist hr charmap', //autoresize
     toolbar: 'undo redo | fontsizeselect | forecolor backcolor | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
     fontsize_formats: '8pt 10pt 11pt 12pt 14pt 18pt 24pt 36pt',
     invalid_elements: 'wbr', //禁止使用適合換行處元素wbr
     paste_data_images: true,
     branding: false, //移除logo
     elementpath: false, //移除選擇元素路徑
-    //resize: false, //禁止改變視窗大小
+    resize: false, //禁止改變視窗大小
     setup: function (ed) {
         ed.on('init', function (e) {
 
@@ -36,7 +40,7 @@ let def_settings = {
 
         })
     },
-    height: 250,
+    height: '100%',
 }
 
 /**
@@ -58,6 +62,10 @@ export default {
                 return def_settings
             }
         },
+        height: {
+            type: Number,
+            default: 250,
+        },
         editable: {
             type: Boolean,
             default: true,
@@ -68,6 +76,10 @@ export default {
         }
     },
     mounted: function() {
+        //console.log('mounted')
+
+        let vo = this
+
         // //強制修改選單字型
         // function modifyFontFamily(q) {
         //     let elems = document.querySelectorAll(q)
@@ -81,10 +93,72 @@ export default {
         // setTimeout(function() {
         //     modifyFontFamily('div,button,span,p,a')
         // }, 500)
+
     },
     computed: {
+
+        changeHeight: function() {
+            //console.log('computed changeHeight')
+
+            let vo = this
+
+            //height for trigger
+            let height = vo.height
+            vo.__heightTemp__ = height
+
+            //updateHeight
+            vo.updateHeight()
+
+            return ''
+        },
+
     },
     methods: {
+
+        onInit: function() {
+            //console.log('methods onInit')
+
+            let vo = this
+
+            //updateHeight
+            vo.updateHeight()
+
+        },
+
+        getEditor: function() {
+            //console.log('methods getEditor')
+
+            let vo = this
+
+            if (vo.$refs.edr) {
+                return vo.$refs.edr.editor
+            }
+            return null
+        },
+
+        updateHeight: function() {
+            //console.log('methods updateHeight')
+
+            let vo = this
+
+            vo.$nextTick(() => {
+
+                //editor
+                let editor = vo.getEditor()
+
+                //ele
+                let frame = get(editor, 'iframeElement') //可編輯區是位於iframe內
+                let ele = get(frame, 'parentNode.parentNode') //把height設定至兩層父層的高度才能響應調整
+
+                //update height
+                if (editor && ele) {
+                    ele.style.height = vo.height + 'px'
+                }
+
+            })
+
+        },
+
     },
 }
 </script>

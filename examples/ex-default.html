@@ -18,7 +18,15 @@
 
     <div id="app">
 
-        <w-tinymce-vue 
+        <w-tinymce-vue
+            style="vertical-align:top;"
+            :height="height"
+            v-model="content"
+        ></w-tinymce-vue>
+
+        <w-tinymce-vue
+            style="vertical-align:top;"
+            :height="200"
             v-model="content"
         ></w-tinymce-vue>
 
@@ -33,8 +41,15 @@
         new Vue({
             el: '#app',
             data: {
-                content:'abc中文123'
-            }
+                content: 'abc中文123',
+                height: 250,
+            },
+            // mounted: function() {
+            //     let vo=this
+            //     setInterval(function(){
+            //         vo.height+=10
+            //     },1000)
+            // },
         })
 
     </script>
