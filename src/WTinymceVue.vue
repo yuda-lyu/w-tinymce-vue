@@ -15,7 +15,8 @@
 
 <script>
 import get from 'lodash/get'
-import Editor from '@tinymce/tinymce-vue'
+import isElement from 'lodash/isElement'
+import Editor from '@tinymce/tinymce-vue' //支援vue2是3.2.6, 支援vue3是4.x
 import './zh_TW.js'
 
 
@@ -51,7 +52,7 @@ let def_settings = {
  */
 export default {
     components: {
-        'tinymce-vue': Editor
+        'tinymce-vue': Editor,
     },
     props: {
         value: {
@@ -75,26 +76,26 @@ export default {
         return {
         }
     },
-    mounted: function() {
-        //console.log('mounted')
+    // mounted: function() {
+    //     //console.log('mounted')
 
-        let vo = this
+    //     let vo = this
 
-        // //強制修改選單字型
-        // function modifyFontFamily(q) {
-        //     let elems = document.querySelectorAll(q)
-        //     console.log(elems)
-        //     let index = 0; let length = elems.length
-        //     for (; index < length; index++) {
-        //         elems[index].style.fontFamily = 'Microsoft JhengHei'
-        //     }
-        // }
-        // //因tinymce選單是啟動後插入, 無法被css樣式穿透修改, 故改用js延遲修改
-        // setTimeout(function() {
-        //     modifyFontFamily('div,button,span,p,a')
-        // }, 500)
+    //     //強制修改選單字型
+    //     function modifyFontFamily(q) {
+    //         let elems = document.querySelectorAll(q)
+    //         console.log(elems)
+    //         let index = 0; let length = elems.length
+    //         for (; index < length; index++) {
+    //             elems[index].style.fontFamily = 'Microsoft JhengHei'
+    //         }
+    //     }
+    //     //因tinymce選單是啟動後插入, 無法被css樣式穿透修改, 故改用js延遲修改
+    //     setTimeout(function() {
+    //         modifyFontFamily('div,button,span,p,a')
+    //     }, 500)
 
-    },
+    // },
     computed: {
 
         useSettings: function() {
@@ -102,10 +103,13 @@ export default {
 
             let vo = this
 
-            return {
+            let st = {
                 ...def_settings,
                 ...vo.settings,
             }
+            // console.log('st', st)
+
+            return st
         },
 
         changeHeight: function() {
@@ -147,6 +151,11 @@ export default {
             return null
         },
 
+        remove: function(ele) {
+            //console.log('methods remove', ele)
+            ele.parentNode.removeChild(ele)
+        },
+
         updateHeight: function() {
             //console.log('methods updateHeight')
 
@@ -161,17 +170,35 @@ export default {
                 let frame = get(editor, 'iframeElement') //可編輯區是位於iframe內
                 let ele = get(frame, 'parentNode.parentNode') //把height設定至兩層父層的高度才能響應調整
 
+                //check
+                if (!vo.$el || !editor || !ele) {
+                    return
+                }
+
+                //isIE11
+                let eleIE11 = vo.$el.querySelector('.tox-platform-ie')
+                let isIE11 = isElement(eleIE11)
+
                 //update height
-                if (editor && ele) {
-                    ele.style.height = vo.height + 'px'
+                ele.style.height = vo.height + 'px'
+                //於IE11未設定min-height會無法順利展開, 得一併設定
+                if (isIE11) {
+                    ele.style.minHeight = ele.style.height
+                    // ele.style.maxHeight = ele.style.height
+                }
+
+                //IE11時選單下方的分隔線會消失, 得強制給予
+                if (isIE11) {
+                    let eleToolbar = vo.$el.querySelector('.tox-toolbar-overlord')
+                    if (eleToolbar) {
+                        eleToolbar.style.borderBottom = '1px solid #ccc'
+                    }
                 }
 
                 //移除logo後的空白區域
-                if (vo.$el) {
-                    let sb = vo.$el.querySelector('.tox-statusbar')
-                    if (sb) {
-                        sb.remove()
-                    }
+                let sb = vo.$el.querySelector('.tox-statusbar')
+                if (sb) {
+                    vo.remove(sb)
                 }
 
             })

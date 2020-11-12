@@ -1,14 +1,14 @@
 {
   "name": "w-tinymce-vue",
-  "version": "1.0.29",
+  "version": "1.0.30",
   "description": "A wrapper for @tinymce/tinymce-vue.",
   "main": "dist/w-tinymce-vue.umd.js",
   "dependencies": {
-    "tinymce": "^5.4.1",
-    "@tinymce/tinymce-vue": "^3.2.2"
+    "tinymce": "^5.5.1",
+    "@tinymce/tinymce-vue": "^3.2.6"
   },
   "devDependencies": {
-    "w-package-tools": "^1.0.27"
+    "w-package-tools": "^1.0.30"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha --require @babel/register",
