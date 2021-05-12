@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/tinymce/tinymce.min.js"></script>
 
     <!-- vue -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.min.js"></script>
 
     <!-- w-tinymce-vue -->
     <script src="../dist/w-tinymce-vue.umd.js"></script>
@@ -16,12 +16,15 @@
 </head>
 <body style="font-family:'Microsoft JhengHei','Avenir','Helvetica';  margin:0px; padding:0px; height:100vh;">
 
-    <div id="app" style="height:100vh;">
+    <div id="app">
 
         <div style="margin:20px;">
             <div>1. bind height</div>
+            <div>
+                <button type="button" @click="height=150">set height to 150px</button>
+                <button type="button" @click="height=200">set height to 200px</button>
+            </div>
             <w-tinymce-vue
-                style="vertical-align:top;"
                 :height="height"
                 v-model="content"
             ></w-tinymce-vue>
@@ -30,7 +33,6 @@
         <div style="margin:20px;">
             <div>2. sync content</div>
             <w-tinymce-vue
-                style="vertical-align:top;"
                 :height="200"
                 v-model="content"
             ></w-tinymce-vue>
@@ -39,7 +41,6 @@
         <div style="margin:20px;">
             <div>3. settings</div>
             <w-tinymce-vue
-                style="vertical-align:top;"
                 :settings="settings"
                 v-model="content"
             ></w-tinymce-vue>
@@ -57,7 +58,7 @@
             el: '#app',
             data: {
                 content: 'abc中文123',
-                height: 250,
+                height: 200,
                 settings: {
                     menubar: '',
                     plugins: '',
