@@ -1,6 +1,6 @@
 {
   "name": "w-tinymce-vue",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A wrapper for @tinymce/tinymce-vue.",
   "main": "dist/w-tinymce-vue.umd.js",
   "dependencies": {
@@ -8,7 +8,7 @@
     "@tinymce/tinymce-vue": "^3.2.6"
   },
   "devDependencies": {
-    "w-package-tools": "^1.0.54"
+    "w-package-tools": "^1.0.59"
   },
   "scripts": {
     "test": "mocha --parallel --timeout 60000 --experimental-modules --es-module-specifier-resolution=node",
