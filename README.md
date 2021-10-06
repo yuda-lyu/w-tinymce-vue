@@ -4,7 +4,6 @@ A wrapper for @tinymce/tinymce-vue.
 ![language](https://img.shields.io/badge/language-JavaScript-orange.svg) 
 [![language](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://github.com/vuejs/vue) 
 [![npm version](http://img.shields.io/npm/v/w-tinymce-vue.svg?style=flat)](https://npmjs.org/package/w-tinymce-vue) 
-[![Build Status](https://travis-ci.org/yuda-lyu/w-tinymce-vue.svg?branch=master)](https://travis-ci.org/yuda-lyu/w-tinymce-vue) [![license](https://img.shields.io/npm/l/w-tinymce-vue.svg?style=flat)](https://npmjs.org/package/w-tinymce-vue) 
 [![gzip file size](http://img.badgesize.io/yuda-lyu/w-tinymce-vue/master/dist/w-tinymce-vue.umd.js.svg?compression=gzip)](https://github.com/yuda-lyu/w-tinymce-vue)
 [![npm download](https://img.shields.io/npm/dt/w-tinymce-vue.svg)](https://npmjs.org/package/w-tinymce-vue) 
 [![jsdelivr download](https://img.shields.io/jsdelivr/npm/hm/w-tinymce-vue.svg)](https://www.jsdelivr.com/package/npm/w-tinymce-vue)
