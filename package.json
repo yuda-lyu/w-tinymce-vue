@@ -1,14 +1,13 @@
 {
   "name": "w-tinymce-vue",
-  "version": "2.0.2",
-  "description": "A wrapper for @tinymce/tinymce-vue.",
+  "version": "2.0.3",
   "main": "dist/w-tinymce-vue.umd.js",
   "dependencies": {
     "tinymce": "^5.5.1",
     "@tinymce/tinymce-vue": "^3.2.6"
   },
   "devDependencies": {
-    "w-package-tools": "^1.0.65"
+    "w-package-tools": "^1.0.66"
   },
   "scripts": {
     "test": "mocha --parallel --timeout 60000 --experimental-modules --es-module-specifier-resolution=node",
@@ -18,17 +17,13 @@
     "type": "git",
     "url": "git+https://github.com/yuda-lyu/w-tinymce-vue.git"
   },
-  "author": "yuda-lyu(semisphere)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/yuda-lyu/w-tinymce-vue/issues"
-  },
-  "homepage": "https://github.com/yuda-lyu/w-tinymce-vue#readme",
   "keywords": [
     "package",
     "tool",
     "tinymce",
     "vue",
     "wrapper"
-  ]
+  ],
+  "author": "yuda-lyu(semisphere)",
+  "license": "MIT"
 }
