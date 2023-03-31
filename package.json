@@ -1,9 +1,9 @@
 {
   "name": "w-tinymce-vue",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "main": "dist/w-tinymce-vue.umd.js",
   "dependencies": {
-    "tinymce": "^5.5.1",
+    "tinymce": "^5.10.7",
     "@tinymce/tinymce-vue": "^3.2.6"
   },
   "devDependencies": {
