@@ -1,13 +1,14 @@
 {
   "name": "w-tinymce-vue",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "main": "dist/w-tinymce-vue.umd.js",
   "dependencies": {
+    "@tinymce/tinymce-vue": "^3.2.6",
     "tinymce": "^5.10.7",
-    "@tinymce/tinymce-vue": "^3.2.6"
+    "lodash-es": "^4.17.21"
   },
   "devDependencies": {
-    "w-package-tools": "^1.0.69"
+    "w-package-tools": "^1.0.73"
   },
   "scripts": {
     "test": "mocha --parallel --timeout 60000 --experimental-modules --es-module-specifier-resolution=node",

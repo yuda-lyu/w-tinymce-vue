@@ -6,6 +6,7 @@ A wrapper for @tinymce/tinymce-vue.
 [![npm version](http://img.shields.io/npm/v/w-tinymce-vue.svg?style=flat)](https://npmjs.org/package/w-tinymce-vue) 
 [![gzip file size](http://img.badgesize.io/yuda-lyu/w-tinymce-vue/master/dist/w-tinymce-vue.umd.js.svg?compression=gzip)](https://github.com/yuda-lyu/w-tinymce-vue)
 [![npm download](https://img.shields.io/npm/dt/w-tinymce-vue.svg)](https://npmjs.org/package/w-tinymce-vue) 
+[![npm download](https://img.shields.io/npm/dm/w-tinymce-vue.svg)](https://npmjs.org/package/w-tinymce-vue) 
 [![jsdelivr download](https://img.shields.io/jsdelivr/npm/hm/w-tinymce-vue.svg)](https://www.jsdelivr.com/package/npm/w-tinymce-vue)
 
 ## Documentation
@@ -45,7 +46,7 @@ Vue.component('w-tinymce-vue', WTinymceVue)
 ```
 [Necessary] Add script for w-tinymce-vue.
 ```alias
-<script src="https://cdn.jsdelivr.net/npm/w-tinymce-vue@2.0.5/dist/w-tinymce-vue.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/w-tinymce-vue@2.0.6/dist/w-tinymce-vue.umd.js"></script>
 ```
 Directly use:
 ```alias
