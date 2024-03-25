@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import get from 'lodash-es/get'
-import isElement from 'lodash-es/isElement'
+import get from 'lodash-es/get.js'
+import isElement from 'lodash-es/isElement.js'
 import Editor from '@tinymce/tinymce-vue' //支援vue2是3.2.6, 支援vue3是4.x
 import './zh_TW.js'
 
