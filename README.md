@@ -46,7 +46,7 @@ Add script for vue.
 
 Add script for w-tinymce-vue.
 ```alias
-<script src="https://cdn.jsdelivr.net/npm/w-tinymce-vue@2.0.12/dist/w-tinymce-vue.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/w-tinymce-vue@2.0.13/dist/w-tinymce-vue.umd.js"></script>
 ```
 
 Directly use:
