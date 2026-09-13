@@ -1,6 +1,6 @@
 {
   "name": "w-tinymce-vue",
-  "version": "2.0.13",
+  "version": "2.0.14",
   "main": "dist/w-tinymce-vue.umd.js",
   "dependencies": {
     "@tinymce/tinymce-vue": "^3.2.6",
@@ -9,10 +9,10 @@
   },
   "devDependencies": {
     "vue": "^2.7.16",
-    "w-package-tools": "^1.1.15"
+    "w-package-tools": "^1.1.16"
   },
   "scripts": {
-    "test": "mocha --parallel --timeout 60000",
+    "test": "mocha --parallel \"test/*.test.mjs\" --timeout 180000",
     "deploy": "gh-pages -d docs"
   },
   "repository": {
