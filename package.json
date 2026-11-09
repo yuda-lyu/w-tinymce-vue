@@ -1,10 +1,10 @@
 {
   "name": "w-tinymce-vue",
-  "version": "2.0.16",
+  "version": "2.0.17",
   "main": "dist/w-tinymce-vue.umd.js",
   "dependencies": {
     "@tinymce/tinymce-vue": "^3.2.6",
-    "tinymce": "^5.10.7",
+    "tinymce": "^6.8.6",
     "lodash-es": "^4.18.1"
   },
   "devDependencies": {

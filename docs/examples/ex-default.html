@@ -5,7 +5,7 @@
     <title>example for w-tinymce-vue</title>
 
     <!-- tinymce -->
-    <script src="https://cdn.jsdelivr.net/npm/tinymce@5.10.7/tinymce.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tinymce@6.8.6/tinymce.min.js"></script>
 
     <!-- vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.min.js"></script>
@@ -62,15 +62,16 @@
                 settings: {
                     menubar: '',
                     plugins: '',
-                    toolbar: 'fontsizeselect | forecolor backcolor | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
+                    toolbar: 'fontsize | forecolor backcolor | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
                     // language: 'zh_TW',
                     // menubar: 'edit insert format table',
-                    // plugins: 'paste imagetools link table lists advlist hr charmap', //autoresize
-                    // toolbar: 'undo redo | fontsizeselect | forecolor backcolor | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
-                    // fontsize_formats: '8pt 10pt 11pt 12pt 14pt 18pt 24pt 36pt',
+                    // plugins: 'link table lists advlist charmap', //autoresize
+                    // toolbar: 'undo redo | fontsize | forecolor backcolor | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
+                    // font_size_formats: '8pt 10pt 11pt 12pt 14pt 18pt 24pt 36pt',
                     // invalid_elements: 'wbr', //禁止使用適合換行處元素wbr
                     // paste_data_images: true,
                     // branding: false, //移除logo
+                    // promotion: false, //移除選單列右側之升級推廣連結
                     // elementpath: false, //移除選擇元素路徑
                     // resize: false, //禁止改變視窗大小
                 },
